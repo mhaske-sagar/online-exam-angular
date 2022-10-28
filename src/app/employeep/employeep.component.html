@@ -1,0 +1,35 @@
+<app-employeec [all]="total()" [male]="totalmale()" [female]="totalfemale()" 
+ (ram)=pchange($event)></app-employeec><br>
+ <hr><br>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Gender</th>
+         </tr>
+    </thead>
+    <tbody>
+        
+            <ng-container *ngFor="let employee of employeedata">
+                <tr *ngIf="selectedp=='All' ||
+                           selectedp==employee.Gender">
+                           <td>{{employee.Id}}</td>
+                           <td>{{employee.Name}}</td>
+                           <td>{{employee.dob}}</td>
+                           <td>{{employee.Gender}}</td>
+                </tr>
+
+            </ng-container>
+            <tr *ngIf="!employeedata  || employeedata.length==0">
+                <td colspan="4">
+                    no data to show
+                </td>
+            </tr>
+            
+            
+       
+    </tbody>
+
+</table>

@@ -1,0 +1,32 @@
+
+ <form [formGroup]="profileForm">
+
+    <label >
+        First Name : <input type="text" formControlName="firstname">
+    </label><br>
+    <label >
+        Last Name : <input type="text" formControlName="lastname">
+    </label><br><hr>
+    <div formGroupName="address">
+        <h4>address</h4>
+    <label >
+        village : <input type="text" formControlName="village">
+    </label><br>
+    <label >
+        Street : <input type="text" formControlName="street">
+    </label><br>
+    <label >
+        Taluka : <input type="text" formControlName="taluka">
+    </label><br>
+    <label >
+        dist : <input type="text" formControlName="dist">
+    </label>
+</div>
+
+<button type="submit" (click)="focus()">Update</button>
+
+
+
+
+
+ </form>

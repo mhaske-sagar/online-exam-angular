@@ -1,0 +1,36 @@
+<html>
+    <body><div>
+<br>
+<h1>welcome to angular</h1>
+<br><br><br>
+<form action="">
+    Username : <input type="text" name="username" [(ngModel)]="users.username"><br><br>
+    Password :<input type="text" name="password" [(ngModel)]="users.password"><br><br>
+    Mobile No :<input type="number" name="mobno" [(ngModel)]="users.mobile_no"><br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input id="s11"type="button" name="" value="Add" (click)="adduser()">&nbsp;&nbsp;
+    <input id="s11" type="button" value="View" (click)="views()">&nbsp;&nbsp;
+    <input  id="s11"type="button" value="Update" (click)="update()">&nbsp;&nbsp;
+    <input  id="s11"type="button" value="Delete" (click)="Delete()">   
+    <br>{{message}}
+    
+</form>
+
+<br><br>
+<table>
+    <thead>
+    <tr>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Mobile No</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let i of user">
+        <td>{{i.username}}</td>
+        <td>{{i.password}}</td>
+        <td>{{i.mobile_no}}</td>
+    </tr>
+</tbody>
+</table></div>
+</body>
+</html>

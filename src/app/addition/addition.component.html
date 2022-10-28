@@ -1,0 +1,19 @@
+<!--this is inside app component html-->
+<form >
+    Enter First No. :<input name="first" [(ngModel)]="first"><br><br>
+    Enter Second No.:<input name="second" [(ngModel)]="second"><br><br>
+    <h4> Choose following Option</h4>
+    <ol>
+        <li>Addition</li>
+        <li>Subtraction</li>
+        <li>Multiplication</li>
+        <li>Divide</li>
+    </ol>
+    <input name="no" [(ngModel)]="no" value="none"><br><br>
+    
+
+
+
+    <button (click)="Ans()">result</button><input name="result" [(ngModel)]="result">
+    
+</form>

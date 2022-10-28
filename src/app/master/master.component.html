@@ -1,0 +1,20 @@
+
+<form [formGroup]="form">
+    <table>
+        <tr>
+            <th>username</th>
+            <th><input type="text" formControlName="username" required maxlength="30" minlength="2"></th>
+        </tr><br><br>
+        <tr>
+            <th>Password</th>
+            <th><input type="password" formControlName="password"></th>
+        </tr><br><br>
+
+        <tr>
+            <th><input type="submit" (click)="submit()"></th>
+        </tr>
+
+
+    </table>
+
+</form>

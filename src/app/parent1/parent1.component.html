@@ -1,0 +1,34 @@
+
+
+<app-child1 [all]="student.length" [male]="tmale()" [female]="tfemale()" [fe]="fe()" [se]="se()"(sam)="changep($event)"></app-child1>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Batch</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container class="a1"*ngFor="let student of student" >
+            <tr *ngIf="selectp=='All' ||
+                       selectp==student.gender ||
+                       selectp==student.batch"  [style.color]="getcolor(student.gender)">
+                <td>{{student.id}}</td>
+                <td>{{student.name | titlename:(student.gender)}}</td>
+                <td>{{student.surname}}</td>
+                <td>{{student.dob}}</td>
+                <td>{{student.gender}}</td>
+                <td>{{student.batch}}</td>
+
+
+            </tr>
+        </ng-container>
+        
+    </tbody>
+</table>

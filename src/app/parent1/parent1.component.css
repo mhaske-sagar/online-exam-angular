@@ -1,0 +1,13 @@
+table,th,tr,td{
+    border: 1px solid;
+    border-collapse: collapse;
+    padding:5px;
+}
+ 
+  
+
+tr:hover
+{
+    color:green;
+    background-color: lightgreen;
+}

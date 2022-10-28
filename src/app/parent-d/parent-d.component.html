@@ -1,0 +1,28 @@
+
+
+<app-child-d [all]="student.length" [male]="tmale()" [female]="fmale()" (sam)="changep($event)"></app-child-d>
+
+
+<br><br><br><hr>
+
+<table>
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let student of student" >
+            <tr *ngIf="selectp=='All' ||
+                       selectp==student.gender">
+                <td>{{student.uid}}</td>
+                <td>{{student.name | titlename:student.gender}}</td>
+                <td>{{student.gender}}</td>
+            </tr>
+    
+        </ng-container>
+    </tbody>
+    
+</table>

@@ -1,0 +1,28 @@
+
+table,th,td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+
+}
+
+#s11:hover{
+    background-color:blue;
+    color:burlywood;
+    border: none;
+    border-radius: 10px;
+}
+#s11
+{
+    border: none;
+    border-radius: 10px;
+    color:cornflowerblue; 
+}
+tr:hover{
+    background-color: burlywood;
+    color: brown;
+}
+body
+{
+background-color: bisque;}
+

@@ -1,0 +1,15 @@
+<p>array works!</p>
+
+<table>
+    <tr>
+        <th>rno</th>
+        <th>name</th>
+        <th>photo</th>
+    </tr>
+    <tr *ngFor="let student of students">
+        <td>{{student.rno}}</td>
+        <td>{{student.name}}</td>
+        <td> <img src="{{student.photo}}" > </td>
+
+    </tr>
+</table>
